@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "camila"
+version = "0.1.0"
+description = ""
+authors = ["Kamil Marut <kamil@kamilmarut.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.12"
+langchain = "^0.0.284"
+unstructured = {extras = ["md"], version = "^0.10.12"}
+openai = "^0.28.0"
+tiktoken = "^0.4.0"
+chromadb = "^0.4.9"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.0.287"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+select = ["E", "F", "ANN", "ASYNC", "S", "A", "DJ", "G", "PIE", "T20", "RSE", "SIM", "PTH", "PD", "TRY", "RUF"]
+ignore = ["ANN401"]
+line-length = 120
+target-version = "py311"
